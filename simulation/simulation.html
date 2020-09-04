@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation</title>
+    <link rel="stylesheet" href="simulation.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <ul>
+                <li><a href="aim.html">Aim</a></li>
+                <li><a href="news.asp">Theory</a></li>
+                <li><a href="contact.asp">PreTest</a></li>
+                <li><a href="about.asp">Procedure</a></li>
+                <li id=><a href="#">Simulation</a></li>
+                <li><a href="about.asp">Result</a></li>
+                <li><a href="about.asp">Review Question</a></li>
+                <li><a href="about.asp">Feedback</a></li>
+              </ul>
+        </div>
+        <div class="main">
+            <h1>VERIFICATION OF BERNOULLI'S THEOREM</h1>
+            <div class="heading">
+                <h2>SIMULATION</h2>
+            </div>
+            <div class="table">
+                <div>
+                    <span class="label">INPUT TOTAL HEAD(H) </span><input type="text" id="input_head"><span class="label">cm</span>
+                </div>
+                <div>
+                    <span class="p-5 t-white b-lgrey f-bold">Length of the tube = 100cm</span>
+                </div>
+                <div>
+                    <span class="label">No. of Piezometer attached :</span>
+                    <select name="piezometers" id="piezometers" onchange="gen();">
+                        <option value="two">two</option>
+                        <option value="three">three</option>
+                        <option value="four">four</option>
+                        <option value="five">five</option>
+                        <option value="six">six</option>
+                        <option value="seven">seven</option>
+                        <option value="eight">eight</option>
+                        <option value="nine">nine</option>
+                        <option value="ten">ten</option>
+                    </select>
+                    <span class="label">nos.</span>
+                </div>
+                <div>
+                    <table id="observation-table">
+                        <tr>
+                            <th><span class="label">SR. NO.</span></th>
+                            <th><span class="label">DISTANCE(D)</span></th>
+                            <th><span class="label">AREA at Section(A)</span></th>
+                            <th><span class="label">Velocity</span></th>
+                            <th><span class="label">K. Head</span></th>
+                            <th><span class="label">P. Head</span></th>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="label">Input Discharge Details:</h3>
+                </div>
+                <div style="display: flex;">
+                    <span style="flex:3;color:black;background-color:lightgrey;">Area of Discharge Tank: </span>
+                    <span style="flex:1;color:black;background-color:lightgrey;">30*50cm</span>
+                </div>
+                <div style="display: flex;">
+                    Select No of seconds to fill 5cm of Tank
+                    <input id="seconds" type="text"0>
+                    <button id="calculate">Submit</button>
+                </div>
+                <div>
+                    <span class="label">Discharge is</span>
+                    <input id="discharge" type="text" disabled>
+                    <span class="label">cm<sup>3</sup>/sec</span>
+                </div>
+                <div>
+                    <button>Head Calculator</button>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="chart">
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+      <script src="simulation.js"></script>
+      <script src="chart.js"></script>
+</body>
+</html> 
